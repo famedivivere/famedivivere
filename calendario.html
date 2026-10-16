@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calendario eventi – Fame di Vivere ODV</title>
+<meta name="description" content="Il calendario degli incontri e degli eventi di Fame di Vivere ODV a Prato.">
+<meta name="theme-color" content="#502068">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Fame di Vivere – home">
+      <img src="img/logo-sm.png" alt="">
+      <span><b>FAME DI VIVERE ODV</b><small>Associazione di volontariato</small></span>
+    </a>
+    <button class="burger" aria-label="Apri il menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Chi siamo</a></li>
+      <li><a href="cosa-puoi-fare.html">Cosa puoi fare tu</a></li>
+      <li><a href="calendario.html" aria-current="page">Calendario eventi</a></li>
+      <li><a href="test.html">Test</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a class="cta" href="contatti.html">Contattaci</a></li>
+    </ul>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="blob b1" style="width:380px;height:380px;right:-120px;top:-150px"></div>
+  <div class="wrap">
+    <span class="eyebrow">Calendario eventi</span>
+    <h1>Troviamo un momento per incontrarci.</h1>
+    <p class="lead">In questa pagina trovi il calendario dei nostri incontri: occasioni per conoscerci, condividere esperienze e partecipare alla vita dell'associazione.</p>
+    <p>Per ogni appuntamento indichiamo a chi è rivolto, dove si svolge e come partecipare.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap cal-layout">
+    <div class="cal">
+      <div class="cal-top">
+        <h2 id="cal-title" aria-live="polite"></h2>
+        <div class="cal-nav">
+          <button id="cal-prev" aria-label="Mese precedente">&#8249;</button>
+          <button id="cal-oggi">Oggi</button>
+          <button id="cal-next" aria-label="Mese successivo">&#8250;</button>
+        </div>
+      </div>
+      <div class="cal-grid" id="cal-grid"></div>
+      <div class="cal-legend"><span><i></i>Giorno con un evento</span><span><i class="t"></i>Oggi</span></div>
+    </div>
+    <aside class="day-panel" id="day-panel" aria-live="polite"></aside>
+  </div>
+</section>
+
+<section class="alt" id="prossimi-eventi">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Prossimi eventi</span>
+      <h2>Incontrarsi, conoscere, partecipare.</h2>
+      <p class="lead">Organizziamo eventi per far conoscere l'associazione, sensibilizzare sul tema dei disturbi alimentari e coinvolgere la comunità.</p>
+    </div>
+    <div class="proximi" id="proximi"></div>
+    <p style="margin-top:2.2rem"><strong>Vuoi partecipare o proporre un'iniziativa?</strong> <a href="contatti.html">Scrivici</a> <a href="mailto:info@famedivivere.it">info@famedivivere.it</a>.</p>
+  </div>
+</section>
+<script src="eventi.js"></script>
+<script src="calendario.js"></script>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="img/logo.png" alt="">
+        <p><strong>Fame di Vivere ODV</strong><br>Uno spazio di ascolto. Una rete di sostegno.</p>
+      </div>
+      <div>
+        <h4>Esplora</h4>
+        <ul><li><a href="index.html">Chi siamo</a></li><li><a href="index.html#obiettivo">Il nostro obiettivo</a></li><li><a href="cosa-puoi-fare.html">Cosa puoi fare tu</a></li><li><a href="calendario.html">Calendario eventi</a></li><li><a href="test.html">Test</a></li><li><a href="shop.html">Shop</a></li><li><a href="contatti.html">Contattaci</a></li></ul>
+      </div>
+      <div>
+        <h4>Sede</h4>
+        <p>Via Filippino 12, Prato<br>presso AUT BAR – Circolo Arci Orsini</p>
+        <p>E-mail: <a href="mailto:info@famedivivere.it">info@famedivivere.it</a><br>PEC: <a href="mailto:famedivivere@pec.it">famedivivere@pec.it</a></p>
+        <p><a href="contatti.html">Contattaci</a></p>
+      </div>
+    </div>
+    <div class="legal">
+      <span>Le attività associative non sostituiscono i percorsi di cura.</span>
+      <span>© 2026 Fame di Vivere ODV</span>
+    </div>
+  </div>
+</footer>
+<script>
+  const b=document.querySelector('.burger'),m=document.getElementById('menu');
+  b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',e=>{if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+</script>
+</body>
+</html>
