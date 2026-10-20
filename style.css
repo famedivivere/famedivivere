@@ -352,3 +352,27 @@ footer a{color:#fff}
 .copy:hover:not(:disabled){background:var(--viola-800);color:#fff}
 .copy:disabled{opacity:.4;cursor:not-allowed}
 @media (max-width:900px){.iban-box{grid-template-columns:1fr}.iban-dati div{grid-template-columns:1fr;gap:2px}}
+
+
+/* caratteri ospitati sul sito (niente connessione a Google Fonts) */
+@font-face{font-family:"Nunito";font-style:normal;font-weight:200 1000;font-display:swap;
+  src:local("Nunito"),url("fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype")}
+
+/* contenuti di terze parti caricati a richiesta */
+.consent{background:var(--lilla-50);border:1px dashed var(--viola-400);border-radius:var(--raggio);padding:24px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:240px}
+.consent strong{color:var(--viola-800);font-size:1.1rem}
+.consent p{max-width:52ch;margin:.3rem 0}
+.consent .btn{margin-top:.6rem}
+.map.live .consent{height:100%;border:0;border-radius:0}
+.map.live iframe{width:100%;height:100%}
+iframe.emb-fixed{display:block;width:100%;border:0}
+@media (max-width:900px){iframe.emb-fixed{min-height:560px}.form-box iframe.emb-fixed{height:1300px!important}}
+
+/* pagina privacy */
+.legale{max-width:78ch;background:#fff;border-radius:34px;padding:clamp(24px,4vw,48px);box-shadow:var(--ombra);border:1px solid rgba(123,63,160,.1)}
+.legale h2{font-size:1.35rem;margin:1.8em 0 .5em}
+.legale h3{font-size:1.08rem;margin:1.4em 0 .4em;color:var(--viola-600)}
+.legale>.piccolo:first-child{margin-top:0}
+.legale ul{padding-left:1.2em}
+.legale li{margin:.3em 0}
+.legal a{color:inherit;text-decoration:underline}

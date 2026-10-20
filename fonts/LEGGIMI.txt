@@ -1,0 +1,2 @@
+Metti qui il file Nunito-VariableFont_wght.ttf (scaricabile da fonts.google.com/specimen/Nunito, licenza OFL).
+Il sito lo usa al posto dei caratteri caricati da Google.

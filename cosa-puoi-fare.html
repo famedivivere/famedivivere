@@ -7,9 +7,6 @@
 <meta name="description" content="Sostieni Fame di Vivere ODV: dona, diventa volontario o socio, coinvolgi la tua scuola.">
 <meta name="theme-color" content="#502068">
 <link rel="icon" href="img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -59,8 +56,14 @@
         <p class="piccolo">La donazione online avviene sulla piattaforma GoFundMe.</p>
       </div>
       <div class="dona-widget">
-        <div class="gfm-embed" data-url="https://www.gofundme.com/f/fame-di-vivere/widget/large?attribution_id=sl%3A9604c0a3-3d8c-40a9-814a-c9b6b791f0a7"></div>
-        <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+        <div class="consent" data-embed="iframe"
+             data-src="https://www.gofundme.com/f/fame-di-vivere/widget/large?attribution_id=sl%3A9604c0a3-3d8c-40a9-814a-c9b6b791f0a7"
+             data-title="Raccolta fondi di Fame di Vivere su GoFundMe" data-height="560">
+          <strong>Raccolta fondi su GoFundMe</strong>
+          <p>Per mostrare lo stato della raccolta il tuo browser si collega a GoFundMe, che riceve il tuo indirizzo IP e può usare cookie. Si carica solo se clicchi qui sotto.</p>
+          <button type="button" class="btn primary">Mostra la raccolta</button>
+          <p class="piccolo"><a href="privacy.html#terze-parti">Maggiori informazioni</a></p>
+        </div>
       </div>
     </div>
 
@@ -138,7 +141,7 @@
     </div>
     <div class="legal">
       <span>Le attività associative non sostituiscono i percorsi di cura.</span>
-      <span>© 2026 Fame di Vivere ODV</span>
+      <span>© 2026 Fame di Vivere ODV · <a href="privacy.html">Privacy</a></span>
     </div>
   </div>
 </footer>
@@ -153,5 +156,6 @@
     try{await navigator.clipboard.writeText(el.textContent.replace(/\s+/g,''));const o=b.textContent;b.textContent='Copiato!';setTimeout(()=>b.textContent=o,1800)}catch(e){}
   }));
 </script>
+<script src="consenso.js"></script>
 </body>
 </html>

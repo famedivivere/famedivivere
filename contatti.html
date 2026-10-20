@@ -7,9 +7,6 @@
 <meta name="description" content="Come contattare Fame di Vivere ODV e dove trovarci a Prato, in Via Filippino 12.">
 <meta name="theme-color" content="#502068">
 <link rel="icon" href="img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -43,6 +40,7 @@
       <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 8 9 6 9-6"/></svg></span><div><b>E-MAIL</b><a href="mailto:info@famedivivere.it">info@famedivivere.it</a></div></li>
       <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 8 9 6 9-6"/></svg></span><div><b>PEC (COMUNICAZIONI UFFICIALI)</b><a href="mailto:famedivivereodv@pec.it">famedivivereodv@pec.it</a></div></li>
     </ul>
+    <p class="piccolo privacy-nota" style="max-width:62ch">Quando ci scrivi o ci chiami ci comunichi dei dati personali, che trattiamo con riservatezza come spiegato nell'<a href="privacy.html">informativa privacy</a>. Se non è necessario, evita di mandare per e-mail o messaggio informazioni dettagliate sulla tua salute: possiamo parlarne a voce.</p>
     <p class="lead" style="margin-top:1.6rem"><strong>Non devi affrontare tutto da solo.</strong> Il primo passo può essere semplicemente quello di scriverci.</p>
   </div>
 </section>
@@ -103,9 +101,15 @@
     </div>
     <div>
       <div class="map live">
-        <iframe title="Mappa di Prato con la sede di Fame di Vivere, in Via Filippino 12"
-          src="https://www.google.com/maps?q=Via+Filippino+12,+59100+Prato,+Italia&amp;z=17&amp;hl=it&amp;output=embed"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="consent" data-embed="iframe"
+             data-src="https://www.google.com/maps?q=Via+Filippino+12,+59100+Prato,+Italia&amp;z=17&amp;hl=it&amp;output=embed"
+             data-title="Mappa di Prato con la sede di Fame di Vivere, in Via Filippino 12"
+             data-ratio="map">
+          <strong>Mappa di Google Maps</strong>
+          <p>Per mostrarti la mappa il tuo browser si collega a Google, che riceve il tuo indirizzo IP e può usare cookie. Non lo facciamo senza il tuo consenso: la mappa si carica solo se clicchi qui sotto.</p>
+          <button type="button" class="btn primary">Mostra la mappa</button>
+          <p class="piccolo"><a href="privacy.html#terze-parti">Maggiori informazioni</a></p>
+        </div>
       </div>
       <p class="map-link"><a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Filippino+12,+59100+Prato,+Italia" target="_blank" rel="noopener">Ottieni indicazioni stradali</a></p>
     </div>
@@ -158,7 +162,7 @@
     </div>
     <div class="legal">
       <span>Le attività associative non sostituiscono i percorsi di cura.</span>
-      <span>© 2026 Fame di Vivere ODV</span>
+      <span>© 2026 Fame di Vivere ODV · <a href="privacy.html">Privacy</a></span>
     </div>
   </div>
 </footer>
@@ -167,5 +171,6 @@
   b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
   m.addEventListener('click',e=>{if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded',false)}});
 </script>
+<script src="consenso.js"></script>
 </body>
 </html>
